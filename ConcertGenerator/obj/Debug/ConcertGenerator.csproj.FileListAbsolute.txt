@@ -1,0 +1,16 @@
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\bin\Debug\ConcertGenerator.dll
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\bin\Debug\ConcertGenerator.pdb
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\bin\Debug\ConcertGenerator.ConcertGenerator.apk
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\bin\Debug\ConcertGenerator.ConcertGenerator-Signed.apk
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\ConcertGenerator.csprojResolveAssemblyReference.cache
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\ConcertGenerator.csproj.CoreCompileInputs.cache
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\ConcertGenerator.dll
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\ConcertGenerator.pdb
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\android\bin\ConcertGenerator.ConcertGenerator.apk
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\res\layout\main.xml
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\res\values\strings.xml
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\R.cs.flag
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\uploadflags.txt
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\bin\Debug\ConcertGenerator.dll.mdb
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\android\assets\ConcertGenerator.dll.mdb
+E:\Documents\Coding\ConcertGenerator\ConcertGenerator\obj\Debug\res\layout\song.xml
