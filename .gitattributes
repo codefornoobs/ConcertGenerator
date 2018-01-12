@@ -4,6 +4,7 @@
 # Custom for Visual Studio
 *.cs linguist-language=C#
 *.axml linguist-language=C#
+*.java linguist-language=C#
 bin/* linguist-vendored
 obj/* linguist-vendored
 
