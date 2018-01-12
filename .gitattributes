@@ -4,9 +4,9 @@
 # Custom for Visual Studio
 *.cs linguist-language=C#
 *.axml linguist-language=C#
-*.java linguist-language=C#
-bin/* linguist-vendored
-obj/* linguist-vendored
+
+ConcertGenerator/bin/* linguist-vendored
+ConcertGenerator/obj/* linguist-vendored
 
 # Standard to msysgit
 *.doc	 diff=astextplain
