@@ -2,7 +2,8 @@
 * text=auto
 
 # Custom for Visual Studio
-*.cs     diff=csharp
+*.cs linguist-language=C++
+*.axml linguist-language=C++
 
 # Standard to msysgit
 *.doc	 diff=astextplain
