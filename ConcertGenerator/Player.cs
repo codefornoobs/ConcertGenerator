@@ -1,15 +1,44 @@
-﻿namespace ConcertGenerator
+﻿using System.Collections.Generic;
+
+namespace ConcertGenerator
 {
-    class Player
+    public enum InstrumentType { Voice, Guitar, GuitarPT };
+
+   public class Player
     {
         public string Name;
-        public enum InstrumentType { Voice, Guitar, GuitarPT };
 
-        public int Instrument;
-        public Player(string name, InstrumentType instrument)
+        public List<InstrumentType> _instruments;
+        public Player(string name)
         {
             Name = name;
-            Instrument = (int)instrument;
+            _instruments=new List<InstrumentType>();
+        }
+
+        public void AddNewIntrument(InstrumentType instrument)
+        {
+            if (_instruments.Contains(instrument))
+                return;
+
+            _instruments.Add(instrument);
+        }
+
+        public void RemoveInstrument(InstrumentType instrument)
+        {
+            if (!_instruments.Contains(instrument))
+                return;
+
+            _instruments.Remove(instrument);
+        }
+
+        public void RemoveAllInstruments()
+        {
+            _instruments.Clear();
+        }
+
+        public List<InstrumentType> GetAllInstruments()
+        {
+            return  _instruments;
         }
     }
 }
