@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace ConcertGenerator
 {
-    [Activity(Label = "ConcertGenerator", MainLauncher = true)]
+    [Activity(Label = "ConcertGenerator")]
     public class MainActivity : Activity
     {
         private Button _btnInsert;
@@ -21,8 +21,8 @@ namespace ConcertGenerator
 
             Songs = new List<string>();
 
-            _btnInsert = (Button)FindViewById(Resource.Id.BtnInsert);
-            _btnInsert.Click += InsertAction;
+            //_btnInsert = (Button)FindViewById(Resource.Id.BtnInsert);
+           // _btnInsert.Click += InsertAction;
 
         }
 

@@ -1,4 +1,0 @@
-ConcertGenerator.MainActivity, ConcertGenerator;md5bc6f006426824c666131dc387b959302.MainActivity
-ConcertGenerator.MainActivity, ConcertGenerator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5bc6f006426824c666131dc387b959302.MainActivity
-ConcertGenerator.MainActivity;md5bc6f006426824c666131dc387b959302.MainActivity
-concertgenerator.MainActivity;md5bc6f006426824c666131dc387b959302.MainActivity
