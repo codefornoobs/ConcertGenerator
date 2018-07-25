@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ConcertGenerator.Models;
 
 namespace ConcertGenerator
 {
