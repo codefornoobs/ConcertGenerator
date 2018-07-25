@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConcertGenerator.Models;
 
 namespace ConcertGenerator.Test
 {
@@ -50,11 +51,11 @@ namespace ConcertGenerator.Test
 
             newPlayer.AddNewIntrument(InstrumentType.Guitar);
             newPlayer.AddNewIntrument(InstrumentType.Guitar);
-            newPlayer.AddNewIntrument(InstrumentType.GuitarPT);
+            newPlayer.AddNewIntrument(InstrumentType.GuitarPt);
 
             Assert.AreEqual(2, newPlayer.GetAllInstruments().Count);
             Assert.AreEqual(InstrumentType.Guitar, newPlayer.GetAllInstruments()[0]);
-            Assert.AreEqual(InstrumentType.GuitarPT, newPlayer.GetAllInstruments()[1]);
+            Assert.AreEqual(InstrumentType.GuitarPt, newPlayer.GetAllInstruments()[1]);
         }
         [Test]
         public void RemoveInstrumentGuitar()
@@ -62,11 +63,11 @@ namespace ConcertGenerator.Test
             var newPlayer = new Player("Diogo");
 
             newPlayer.AddNewIntrument(InstrumentType.Guitar);
-            newPlayer.AddNewIntrument(InstrumentType.GuitarPT);
+            newPlayer.AddNewIntrument(InstrumentType.GuitarPt);
             newPlayer.RemoveInstrument(InstrumentType.Guitar);
 
             Assert.AreEqual(1, newPlayer.GetAllInstruments().Count);
-            Assert.AreEqual(InstrumentType.GuitarPT, newPlayer.GetAllInstruments()[0]);
+            Assert.AreEqual(InstrumentType.GuitarPt, newPlayer.GetAllInstruments()[0]);
         }
         [Test]
 
@@ -76,7 +77,7 @@ namespace ConcertGenerator.Test
 
             newPlayer.AddNewIntrument(InstrumentType.Guitar);
             newPlayer.AddNewIntrument(InstrumentType.Voice);
-            newPlayer.AddNewIntrument(InstrumentType.GuitarPT);
+            newPlayer.AddNewIntrument(InstrumentType.GuitarPt);
 
             Assert.AreEqual(3, newPlayer.GetAllInstruments().Count);
 
