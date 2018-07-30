@@ -29,7 +29,7 @@ namespace ConcertGenerator
             var musiciansListButton = (Button)FindViewById(Resource.Id.btnListMusician);
             var addNewMusician = (Button)FindViewById(Resource.Id.btnAddNewMusician);
 
-            musiciansListButton.Click += LoadMusiciansListActivity;
+            musiciansListButton.Click += ShowMusiciansListActivity;
             addNewMusician.Click += AddNewMusicianOnClick;
 
             PlayerApiController.InitializeDatabase();
@@ -63,7 +63,7 @@ namespace ConcertGenerator
             return instruments;
         }
 
-        private void LoadMusiciansListActivity(object sender, EventArgs e)
+        private void ShowMusiciansListActivity(object sender, EventArgs e)
         {
             var playerApi = new PlayerApiController();
 

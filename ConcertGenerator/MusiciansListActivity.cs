@@ -28,7 +28,6 @@ namespace ConcertGenerator
 
             var test = Intent.GetSerializableExtra("players");
             var player = JsonConvert.DeserializeObject<List<Player>>(test.ToString());
-            var dd = 0;
         }
     }
 }
