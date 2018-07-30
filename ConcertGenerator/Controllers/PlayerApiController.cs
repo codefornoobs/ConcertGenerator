@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -10,22 +11,28 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using ConcertGenerator.Models;
+using ConcertGenerator.Globals;
 using SQLite;
 
 namespace ConcertGenerator.Controllers
 {
     class PlayerApiController
     {
+        
         public static void InitializeDatabase()
         {
-            var db = new SQLiteConnection(Globals.Globals.DbConnectionString);
+            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            path = Path.Combine(path, "ConcertGenerator.db3");
+            var db = new SQLiteConnection(path);
 
             db.CreateTable<Player>();
         }
 
         public IEnumerable<Player> GetAllPlayers()
         {
-            var db = new SQLiteConnection(Globals.Globals.DbConnectionString);
+            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            path = Path.Combine(path, "ConcertGenerator.db3");
+            var db = new SQLiteConnection(path);
            return db.Table<Player>();
 
         }
@@ -36,16 +43,20 @@ namespace ConcertGenerator.Controllers
             var player = new Player
             {
                 Name = playerName,
-                Instruments = instruments
+                //Instruments = instruments
             };
-            var db = new SQLiteConnection(Globals.Globals.DbConnectionString);
+            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            path = Path.Combine(path, "ConcertGenerator.db3");
+            var db = new SQLiteConnection(path);
             db.Insert(player);
 
         }
 
         public void AddNewPlayer(Player newPlayer)
         {
-          var db = new SQLiteConnection(Globals.Globals.DbConnectionString);
+            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            path = Path.Combine(path, "ConcertGenerator.db3");
+            var db = new SQLiteConnection(path);
             db.Insert(newPlayer);
 
         }
@@ -56,17 +67,19 @@ namespace ConcertGenerator.Controllers
 
             if(player == null) return;
 
-            if (player.Instruments.Contains(instrument))
-                return;
+           // if (player.Instruments.Contains(instrument))
+           //     return;
 
-            player.Instruments.Add(instrument);
+            //player.Instruments.Add(instrument);
 
             db.Update(player);
         }
 
         private static SQLiteConnection GetPlayerByName(string playerName, out Player player)
         {
-            var db = new SQLiteConnection(Globals.Globals.DbConnectionString);
+            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            path = Path.Combine(path, "ConcertGenerator.db3");
+            var db = new SQLiteConnection(path);
 
             player = db.Table<Player>().FirstOrDefault(s => s.Name == playerName);
             return db;
@@ -78,10 +91,10 @@ namespace ConcertGenerator.Controllers
 
             if(player==null) return;
 
-            if (!player.Instruments.Contains(instrument))
-                return;
+           // if (!player.Instruments.Contains(instrument))
+          //      return;
 
-            player.Instruments.Remove(instrument);
+          //  player.Instruments.Remove(instrument);
 
             db.Update(player);
         }
@@ -90,7 +103,7 @@ namespace ConcertGenerator.Controllers
         {
             var db = GetPlayerByName(playerName, out var player);
 
-            player.Instruments.Clear();
+         //   player.Instruments.Clear();
 
             db.Update(player);
         }
@@ -98,8 +111,8 @@ namespace ConcertGenerator.Controllers
         public List<InstrumentType> GetAllInstrumentsFromPlayer(string playerName)
         {
             var db = GetPlayerByName(playerName, out var player);
-
-            return player.Instruments;
+            return null;
+            // return player.Instruments;
         }
     }
 }

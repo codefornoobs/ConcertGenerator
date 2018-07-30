@@ -14,6 +14,6 @@ namespace ConcertGenerator.Globals
 {
     public class Globals
     {
-        public static string DbConnectionString = "ConcertGenerator";
+        public const string DbConnectionString = "ConcertGenerator";
     }
 }
