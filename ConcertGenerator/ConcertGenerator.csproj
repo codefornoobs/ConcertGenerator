@@ -78,6 +78,8 @@
     <Compile Include="Controllers\PlayerApiController.cs" />
     <Compile Include="Globals\Globals.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Models\Instrument.cs" />
+    <Compile Include="Models\InstrumentApiController.cs" />
     <Compile Include="MusiciansListActivity.cs" />
     <Compile Include="NewMusicianActivity.cs" />
     <Compile Include="Models\Player.cs" />

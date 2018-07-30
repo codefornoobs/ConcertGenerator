@@ -10,10 +10,13 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace ConcertGenerator.Globals
+namespace ConcertGenerator.Models
 {
-    public class Globals
+    public enum InstrumentType { Voice, Guitar, GuitarPt };
+    public class Instrument
     {
-        public const string DbConnectionString = "ConcertGenerator";
+
+        public InstrumentType InstrumentType { get; set; }
+        public string PlayerName { get; set; }
     }
 }

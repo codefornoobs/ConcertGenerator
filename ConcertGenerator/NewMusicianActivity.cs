@@ -33,6 +33,7 @@ namespace ConcertGenerator
             addNewMusician.Click += AddNewMusicianOnClick;
 
             PlayerApiController.InitializeDatabase();
+            InstrumentApiController.InitializeDatabase();
         }
 
         private void AddNewMusicianOnClick(object sender, EventArgs e)
